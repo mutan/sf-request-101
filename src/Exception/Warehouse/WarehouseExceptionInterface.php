@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace App\Exception\DistributionCenter;
+namespace App\Exception\Warehouse;
 
 use App\Exception\AppExceptionInterface;
 

@@ -3,7 +3,6 @@ declare(strict_types=1);
 
 namespace App\Exception\Warehouse;
 
-use App\Exception\DistributionCenter\WarehouseExceptionInterface;
 use App\Exception\NotFoundExceptionInterface;
 use RuntimeException;
 

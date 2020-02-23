@@ -219,7 +219,6 @@ class WarehouseManager
         return $warehouse;
     }
 
-
     /**
      * @return ArrayCollection
      */

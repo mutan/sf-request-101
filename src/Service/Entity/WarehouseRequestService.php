@@ -30,7 +30,7 @@ class WarehouseRequestService
     private $manager;
 
     /**
-     * @param WarehouseFactory          $factory
+     * @param WarehouseFactory $factory
      * @param WarehouseManager $manager
      */
     public function __construct(WarehouseFactory $factory, WarehouseManager $manager)
