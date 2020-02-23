@@ -5,8 +5,14 @@ namespace App\Controller\Api;
 
 use App\Dto\Request\Warehouse\WarehouseAddRequest;
 use App\Dto\Request\Warehouse\WarehouseUpdateRequest;
+use App\Dto\Response\ErrorResponse;
+use App\Enum\ApiHeader;
+use App\Exception\Http\BadRequestException;
 use App\Service\Entity\WarehouseRequestService;
+use Nelmio\ApiDocBundle\Annotation\Model;
+use Swagger\Annotations as SWG;
 use Symfony\Component\HttpFoundation\JsonResponse;
+use Symfony\Component\Routing\Annotation\Route;
 use Throwable;
 
 /**
@@ -30,6 +36,46 @@ class WarehouseController extends AbstractApiController
     /**
      * @param WarehouseAddRequest $request
      *
+     * @SWG\Tag(name="warehouse")
+     *
+     * @SWG\Parameter(
+     *     in="header",
+     *     name=ApiHeader::API_KEY,
+     *     description="API-token",
+     *     type="string",
+     *     required=true
+     * )
+     * @SWG\Parameter(
+     *     in="body",
+     *     name="body",
+     *     description="Данные склада",
+     *     @Model(type=WarehouseAddRequest::class)
+     * )
+     * @SWG\Response(
+     *     response=JsonResponse::HTTP_CREATED,
+     *     description="Склад успешно создан",
+     *     @Model(type=WarehouseDto::class)
+     * )
+     * @SWG\Response(
+     *     response=JsonResponse::HTTP_BAD_REQUEST,
+     *     description="Ошибка валидации",
+     *     @Model(type=ErrorResponse::class)
+     * )
+     * @SWG\Response(
+     *     response=JsonResponse::HTTP_UNAUTHORIZED,
+     *     description="Api-ключ некорректен",
+     *     @Model(type=ErrorResponse::class)
+     * )
+     * @SWG\Response(
+     *     response=JsonResponse::HTTP_INTERNAL_SERVER_ERROR,
+     *     description="Ошибка при создании",
+     *     @Model(type=ErrorResponse::class)
+     * )
+     *
+     * @Route("", methods={Request::METHOD_POST}, name="create")
+     *
+     *
+     * @throws BadRequestException
      * @throws Throwable
      * @return JsonResponse
      */

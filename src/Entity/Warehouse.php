@@ -13,8 +13,6 @@ class Warehouse
 {
     /**
      * @var int
-     *
-     *
      * @ORM\Id()
      * @ORM\GeneratedValue(strategy="IDENTITY")
      * @ORM\Column(type="integer")
@@ -50,7 +48,7 @@ class Warehouse
     /**
      * @return string
      */
-    public function getCode(): ?string
+    public function getCode(): string
     {
         return $this->code;
     }
