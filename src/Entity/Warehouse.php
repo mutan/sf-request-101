@@ -34,21 +34,32 @@ class Warehouse
     private $name;
 
     /**
-     * @var boolean
+     * @var bool
      * @ORM\Column(type="boolean", options={"default" : true})
      */
     private $active;
 
-    public function getId(): ?int
+    /**
+     * @return int
+     */
+    public function getId(): int
     {
         return $this->id;
     }
 
+    /**
+     * @return string
+     */
     public function getCode(): ?string
     {
         return $this->code;
     }
 
+    /**
+     * @param string $code
+     *
+     * @return $this
+     */
     public function setCode(string $code): self
     {
         $this->code = $code;
@@ -56,11 +67,19 @@ class Warehouse
         return $this;
     }
 
-    public function getName(): ?string
+    /**
+     * @return string
+     */
+    public function getName(): string
     {
         return $this->name;
     }
 
+    /**
+     * @param string $name
+     *
+     * @return $this
+     */
     public function setName(string $name): self
     {
         $this->name = $name;
@@ -68,11 +87,19 @@ class Warehouse
         return $this;
     }
 
-    public function getActive(): ?bool
+    /**
+     * @return bool
+     */
+    public function getActive(): bool
     {
         return $this->active;
     }
 
+    /**
+     * @param bool $active
+     *
+     * @return $this
+     */
     public function setActive(bool $active): self
     {
         $this->active = $active;

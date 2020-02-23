@@ -35,7 +35,7 @@ class WarehouseDto
     private $name;
 
     /**
-     * @var boolean
+     * @var bool
      *
      * @Serializer\Type("bool")
      * @Serializer\SerializedName("active")
