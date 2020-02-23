@@ -5,6 +5,7 @@
         "php": "^7.1.3",
         "ext-ctype": "*",
         "ext-iconv": "*",
+        "sberlogistic/editorconfig": "^1.0",
         "sensio/framework-extra-bundle": "^5.1",
         "symfony/asset": "4.4.*",
         "symfony/console": "4.4.*",
@@ -77,5 +78,12 @@
             "allow-contrib": false,
             "require": "4.4.*"
         }
-    }
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "ssh://git@gitlab.sblogistica.ru:7999/sberlogistic/php/editorconfig.git",
+            "reference": "master"
+        }
+    ]
 }
