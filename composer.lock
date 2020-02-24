@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "737faa7c5628f8cb2b5d509d7d77d9f7",
+    "content-hash": "03380bfe1a693ce02efeab87bd67b6d9",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -7105,6 +7105,27 @@
             "time": "2019-10-24T07:13:31+00:00"
         },
         {
+            "name": "mutan/docker-for-sf",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "ssh://git@github.com:22/mutan/docker-for-sf.git",
+                "reference": "aec71f194eb7ff5486682f452c55e24dbce2a13b"
+            },
+            "type": "library",
+            "license": [
+                "MIT License"
+            ],
+            "authors": [
+                {
+                    "name": "Akim Gubanov",
+                    "email": "akim.gubanov@gmail.com"
+                }
+            ],
+            "description": "Docker compose for fast local dev environment",
+            "time": "2020-02-24T14:19:39+00:00"
+        },
+        {
             "name": "nikic/php-parser",
             "version": "v4.3.0",
             "source": {
@@ -7656,7 +7677,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "mutan/docker-for-sf": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

@@ -41,6 +41,7 @@
     },
     "require-dev": {
         "easycorp/easy-log-handler": "^1.0.7",
+        "mutan/docker-for-sf": "dev-master",
         "symfony/browser-kit": "^4.4",
         "symfony/css-selector": "^4.4",
         "symfony/debug-bundle": "^4.4",
@@ -100,6 +101,11 @@
         {
             "type": "vcs",
             "url": "ssh://git@gitlab.sblogistica.ru:7999/sberlogistic/php/editorconfig.git",
+            "reference": "master"
+        },
+        {
+            "type": "vcs",
+            "url": "ssh://git@github.com:22/mutan/docker-for-sf.git",
             "reference": "master"
         }
     ]

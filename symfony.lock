@@ -158,6 +158,9 @@
     "monolog/monolog": {
         "version": "1.25.3"
     },
+    "mutan/docker-for-sf": {
+        "version": "dev-master"
+    },
     "nelmio/api-doc-bundle": {
         "version": "3.0",
         "recipe": {
